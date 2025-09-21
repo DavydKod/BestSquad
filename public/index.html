@@ -3,7 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Best Squad</title>
   </head>
-  <body></body>
+  <body>
+    <section id="login">
+      <label for="enterNickname">Уведіть свій нікнейм:</label>
+      <br />
+      <input
+        type="text"
+        id="enterUsername"
+        placeholder="Нікнейм"
+        title="Нікнейм"
+      />
+      <br />
+      <label for="enterPassword">Пароль:</label>
+      <br />
+      <input
+        type="password"
+        id="enterPassword"
+        placeholder="Пароль"
+        title="Пароль"
+      />
+      <br />
+      <button onclick="login()">Увійти</button>
+    </section>
+
+    <section id="menu" class="hidden">
+      <label id="testLabel" for="">Розділи/тести:</label>
+      <br />
+      <!-- tests here-->
+      <br />
+      <button id="userStory" onclick="showStory()">
+        Подивитись історію мого проходження тестів
+      </button>
+      <br />
+      <button id="adminStory" onclick="showStoryForAdmin()" class="hidden">
+        Подивитись історію користувачів
+      </button>
+    </section>
+
+    <section id="showMyStory" class="hidden">
+      <!-- demonstration logic-->
+      <button id="backToMenu" onclick="returnToMenu()">
+        Повернутись назад
+      </button>
+    </section>
+
+    <section id="showStoryForAdmin" class="hidden">
+      <!-- demonstration logic-->
+      <button id="backToAdminMenu" onclick="returnToAdminMenu()">
+        Повернутись назад
+      </button>
+    </section>
+
+    <section id="test" class="hidden"></section>
+
+    <script src="js/login.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>
